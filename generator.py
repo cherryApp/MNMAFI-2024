@@ -7,10 +7,11 @@ pdf.add_page()
 
 # Use default font without bold to avoid encoding issues
 pdf.add_font('Roboto', '', 'Roboto-Medium.ttf', uni=True)
+pdf.add_font('RobotoBold', '', 'Roboto-Bold.ttf', uni=True)
 pdf.set_font('Roboto', '', 12)
 
 # Title
-pdf.set_font('Roboto', '', 16)
+pdf.set_font('RobotoBold', '', 16)
 pdf.cell(200, 10, txt="Python Programozás Alapjai Kvíz", ln=True, align='C')
 pdf.ln(10)
 
@@ -50,7 +51,7 @@ for question, options, _ in quiz_questions:
 
 # Add new page for answer key
 pdf.add_page()
-pdf.set_font('Roboto', '', 16)
+pdf.set_font('RobotoBold', '', 16)
 pdf.cell(200, 10, txt="Javítókulcs", ln=True, align='C')
 pdf.ln(10)
 
